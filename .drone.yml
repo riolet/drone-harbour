@@ -1,0 +1,18 @@
+build:
+  image: golang:1.5
+  environment:
+    - CGO_ENABLED=0
+  commands:
+    - make deps
+    - make vet
+    - make build
+    - make test
+    
+publish:
+  docker:
+    username: $$DOCKER_USER
+    password: $$DOCKER_PASS
+    repo: teamharbour/drone-harbour
+    tag: latest
+    when:
+      branch: master
