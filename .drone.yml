@@ -11,7 +11,8 @@ build:
     
 publish:
   docker:
-    repo: docker.ca.bestbuy.com:5000/drone-harbour
+    registry: docker.ca.bestbuy.com:5000
+    repo: drone-harbour
     tag: latest
     insecure: true
     when:
