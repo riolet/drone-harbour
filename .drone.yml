@@ -11,9 +11,7 @@ build:
     
 publish:
   docker:
-    username: $$DOCKER_USER
-    password: $$DOCKER_PASS
-    repo: teamharbour/drone-harbour
+    repo: docker.ca.bestbuy.com:5000/drone-harbour
     tag: latest
     when:
       branch: master
