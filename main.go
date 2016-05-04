@@ -62,7 +62,7 @@ func main() {
 			HostPort string `json:"host_port"`
 			ContainerPort string `json:"container_port"`
 			Env string `json:"env"`				
-		}{system, repo, build, vargs.url, vargs.registry, vargs.img, vargs.host_port, vargs.container_port, vargs.env}
+		}{system, repo, build, vargs.URL, vargs.Registry, vargs.Img, vargs.HostPort, vargs.ContainerPort, vargs.Env}
 
 		if err := json.NewEncoder(&buf).Encode(&data); err != nil {
 			fmt.Printf("Error: Failed to encode JSON payload. %s\n", err)

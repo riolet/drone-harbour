@@ -12,7 +12,7 @@ type Params struct {
 			
 	URL string `json:"url"`
 	Registry  string `json:"registry"`
-	Repo string `json:"repo"`
+	Img string `json:"repo"`
 	HostPort string `json:"host_port"`
 	ContainerPort string `json:"container_port"`
 	Env string `json:"env"`	
