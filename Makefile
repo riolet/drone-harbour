@@ -1,7 +1,7 @@
 .PHONY: all clean deps fmt vet test docker
 
-EXECUTABLE ?= drone-webhook
-IMAGE ?= plugins/$(EXECUTABLE)
+EXECUTABLE ?= drone-harbour
+IMAGE ?= docker.ca.bestbuy.com:5000/$(EXECUTABLE)
 COMMIT ?= $(shell git rev-parse --short HEAD)
 
 LDFLAGS = -X "main.buildCommit=$(COMMIT)"

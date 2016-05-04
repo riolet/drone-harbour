@@ -10,5 +10,5 @@ RUN apk update && \
     ca-certificates && \
   rm -rf /var/cache/apk/*
 
-ADD drone-webhook /bin/
-ENTRYPOINT ["/bin/drone-webhook"]
+ADD drone-harbour /bin/
+ENTRYPOINT ["/bin/drone-harbour"]
