@@ -56,12 +56,12 @@ func main() {
 			System drone.System `json:"system"`
 			Repo   drone.Repo   `json:"repo"`
 			Build  drone.Build  `json:"build"`
-			URL vargs.url `json:"url"`
-			Registry vargs.registry `json:"registry"`
-			Repo vargs.repo `json:"repo"`
-			HostPort vargs.host_port `json:"host_port"`
-			ContainerPort vargs.container_port `json:"container_port"`
-			Env vargs.env `json:"env"`			
+			URL vargs.URL `json:"url"`
+			Registry vargs.Registry `json:"registry"`
+			Repo vargs.Repo `json:"repo"`
+			HostPort vargs.HostPort `json:"host_port"`
+			ContainerPort vargs.ContainerPort `json:"container_port"`
+			Env vargs.Env `json:"env"`			
 		}{system, repo, build, url, registry, repo, host_port, container_port, env}
 
 		if err := json.NewEncoder(&buf).Encode(&data); err != nil {
