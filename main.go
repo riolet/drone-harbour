@@ -61,8 +61,7 @@ func main() {
 			Repo vargs.repo `json:"repo"`
 			HostPort vargs.host_port `json:"host_port"`
 			ContainerPort vargs.container_port `json:"container_port"`
-			Env vargs.env `json:"env"`
-			
+			Env vargs.env `json:"env"`			
 		}{system, repo, build, url, registry, repo, host_port, container_port, env}
 
 		if err := json.NewEncoder(&buf).Encode(&data); err != nil {

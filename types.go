@@ -7,8 +7,15 @@ type Params struct {
 	Auth        Auth              `json:"auth"`
 	Headers     map[string]string `json:"header"`
 	Method      string            `json:"method"`
-	Template    string            `json:"template"`
+	Template    string            `json:"template"`			
+	URL string `json:"url"`
+	Registry  string `json:"registry"`
+	Repo string `json:"repo"`
+	HostPort string `json:"host_port"`
+	ContainerPort string `json:"container_port"`
+	Env string `json:"env"`	
 	ContentType string            `json:"content_type"`
+	
 }
 
 // Auth represents a basic HTTP authentication username and password.
