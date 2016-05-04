@@ -13,5 +13,6 @@ publish:
   docker:
     repo: docker.ca.bestbuy.com:5000/drone-harbour
     tag: latest
+    insecure: true
     when:
       branch: master
