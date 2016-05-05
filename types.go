@@ -14,7 +14,7 @@ type Params struct {
 	Repo string `json:"image"`
 	PublicPort int `json:"public_port"`
 	PrivatePort int `json:"private_port"`
-	Env string `json:"env"`	
+	Env []string `json:"env"`	
 }
 
 // Auth represents a basic HTTP authentication username and password.
