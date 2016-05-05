@@ -60,7 +60,7 @@ func main() {
 			Image string `json:"image"`
 			PublicPort int `json:"public_port"`
 			PrivatePort int `json:"private_port"`
-			Env string `json:"env"`				
+			Env []string `json:"env"`				
 		}{system, repo, build, vargs.Registry, vargs.Repo, vargs.PublicPort, vargs.PrivatePort, vargs.Env}
 
 		if err := json.NewEncoder(&buf).Encode(&data); err != nil {
