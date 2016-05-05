@@ -9,12 +9,11 @@ type Params struct {
 	Method      string            `json:"method"`
 	Template    string            `json:"template"`	
 	ContentType string            `json:"content_type"`
-			
-	URL string `json:"url"`
+				
 	Registry  string `json:"registry"`
 	Repo string `json:"image"`
-	HostPort string `json:"host_port"`
-	ContainerPort string `json:"container_port"`
+	PublicPort int `json:"public_port"`
+	PrivatePort int `json:"private_port"`
 	Env string `json:"env"`	
 }
 

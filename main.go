@@ -87,7 +87,7 @@ func main() {
 	// every webhook request.
 
 	for i, rawurl := range vargs.URLs {
-		uri, err := url.Parse(rawurl)
+		uri, err := url.Parse(rawurl+"/drone-harbour-run")
 
 		if err != nil {
 			fmt.Printf("Error: Failed to parse the hook URL. %s\n", err)
