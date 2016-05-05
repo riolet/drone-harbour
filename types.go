@@ -11,7 +11,7 @@ type Params struct {
 	ContentType string            `json:"content_type"`
 				
 	Registry  string `json:"registry"`
-	Repo string `json:"image"`
+	Repo string `json:"repo"`
 	PublicPort int `json:"public_port"`
 	PrivatePort int `json:"private_port"`
 	Env []string `json:"env"`	
