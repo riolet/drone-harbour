@@ -58,8 +58,8 @@ func main() {
 			Build  drone.Build  `json:"build"`
 			Registry  string `json:"registry"`
 			Image string `json:"image"`
-			PublicPort string `json:"public_port"`
-			PrivatePort string `json:"private_port"`
+			PublicPort int `json:"public_port"`
+			PrivatePort int `json:"private_port"`
 			Env string `json:"env"`				
 		}{system, repo, build, vargs.Registry, vargs.Repo, vargs.PublicPort, vargs.PrivatePort, vargs.Env}
 
