@@ -1,3 +1,5 @@
+clone:
+   skip_verify:true
 build:
   image: golang:1.5
   environment:
