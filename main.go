@@ -61,8 +61,8 @@ func main() {
 			Ports []int `json:"ports"`
 			PortBindings map[string]string `json:"port_bindings"`
 			Env []string `json:"env"`
-        		Links map[string]string `json:"links"`
-        		PublishAllPorts bool `json:"publish_all_ports"`
+        	Links map[string]string `json:"links"`
+        	PublishAllPorts bool `json:"publish_all_ports"`
 		}{system, repo, build, vargs.Registry, vargs.Repo,
 			vargs.Ports, vargs.PortBindings, vargs.Env,
 			vargs.Links, vargs.PublishAllPorts}
@@ -72,16 +72,16 @@ func main() {
 			os.Exit(1)
 		}
 	} else {
-		err := template.Write(&buf, vargs.Template, &drone.Payload{
-			Build:  &build,
-			Repo:   &repo,
-			System: &system,
-		})
+		//err := template.Write(&buf, vargs.Template, &drone.Payload{
+			//Build:  &build,
+			//Repo:   &repo,
+			//System: &system,
+		//})
 
-		if err != nil {
-			fmt.Printf("Error: Failed to execute the content template. %s\n", err)
-			os.Exit(1)
-		}
+		//if err != nil {
+			//fmt.Printf("Error: Failed to execute the content template. %s\n", err)
+			//os.Exit(1)
+		//}
 	}
 
 	// build and execute a request for each url.
