@@ -18,6 +18,5 @@ publish:
     email: $$DOCKER_EMAIL
     repo: drone-harbour
     tag: latest
-    insecure: true
     when:
       branch: master

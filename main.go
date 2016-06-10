@@ -9,9 +9,9 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/drone/drone-go/drone"
-	"github.com/drone/drone-go/plugin"
-	"github.com/drone/drone-go/template"
+	"github.com/riolet/drone-go/drone"
+	"github.com/riolet/drone-go/plugin"
+	"github.com/riolet/drone-go/template"
 )
 
 const (

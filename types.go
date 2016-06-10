@@ -12,9 +12,11 @@ type Params struct {
 				
 	Registry  string `json:"registry"`
 	Repo string `json:"repo"`
-	PublicPort int `json:"public_port"`
-	PrivatePort int `json:"private_port"`
-	Env []string `json:"env"`	
+	Ports []int `json:"ports"`
+	PortBindings map[string]string `json:"port_bindings"`
+	Env []string `json:"env"`
+        Links map[string]string `json:"links"`
+        PublishAllPorts bool `json:"publish_all_ports"`
 }
 
 // Auth represents a basic HTTP authentication username and password.
