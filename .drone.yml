@@ -19,4 +19,4 @@ publish:
     repo: drone-harbour
     tag: latest
     when:
-      branch: master
+      branch: [master, refs/tags/*]
