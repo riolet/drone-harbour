@@ -16,7 +16,7 @@ publish:
     username: $$DOCKER_USERNAME
     password: $$DOCKER_PASSWORD
     email: $$DOCKER_EMAIL
-    repo: drone-harbour
+    repo: riolet/drone-harbour
     tag: latest
     when:
       branch: [master, refs/tags/*]
