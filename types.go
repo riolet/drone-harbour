@@ -10,12 +10,13 @@ type Params struct {
 	Template    string            `json:"template"`	
 	ContentType string            `json:"content_type"`
 				
-	Registry  	string 	`json:"registry"`
-	Repo 		string `json:"repo"`
-	Ports 		[]int `json:"ports"`
-	PortBindings map[string]string `json:"port_bindings"`
-	Env 		[]string `json:"env"`
-    Links 		map[string]string `json:"links"`
+	Registry  	string 		`json:"registry"`
+	Repo 		string 		`json:"repo"`
+	Tag 		string 		`json:"tag"`
+	Ports 		[]int 		`json:"ports"`
+	PortBindings 	map[string]string `json:"port_bindings"`
+	Env 		[]string 	`json:"env"`
+    	Links 		map[string]string `json:"links"`
     PublishAllPorts bool `json:"publish_all_ports"`
 }
 

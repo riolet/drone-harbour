@@ -57,12 +57,13 @@ func main() {
 		Build  drone.Build  `json:"build"`
 		Registry  string `json:"registry"`
 		Image string `json:"image"`
+		Tag string `json:"tag"`
 		Ports []int `json:"ports"`
 		PortBindings map[string]string `json:"port_bindings"`
 		Env []string `json:"env"`
 	Links map[string]string `json:"links"`
 	PublishAllPorts bool `json:"publish_all_ports"`
-	}{system, repo, build, vargs.Registry, vargs.Repo,
+	}{system, repo, build, vargs.Registry, vargs.Repo, vargs.Tag,
 		vargs.Ports, vargs.PortBindings, vargs.Env,
 		vargs.Links, vargs.PublishAllPorts}
 
