@@ -115,6 +115,7 @@ func main() {
 
 		defer resp.Body.Close()
 
+
 		if vargs.Debug || resp.StatusCode >= http.StatusBadRequest {
 			body, err := ioutil.ReadAll(resp.Body)
 
@@ -141,6 +142,10 @@ func main() {
 					resp.Status,
 					string(body),
 				)
+			}
+			if resp.StatusCode >= http.StatusBadRequest {
+				fmt.Printf("Error: Deployment Failed. %s\n")
+				os.Exit(1)
 			}
 		}
 	}
