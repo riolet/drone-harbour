@@ -11,7 +11,6 @@ import (
 
 	"github.com/riolet/drone-go/drone"
 	"github.com/riolet/drone-go/plugin"
-	"github.com/riolet/drone-go/template"
 )
 
 const (
