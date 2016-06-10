@@ -58,10 +58,14 @@ func main() {
 			Build  drone.Build  `json:"build"`
 			Registry  string `json:"registry"`
 			Image string `json:"image"`
-			PublicPort int `json:"public_port"`
-			PrivatePort int `json:"private_port"`
-			Env []string `json:"env"`				
-		}{system, repo, build, vargs.Registry, vargs.Repo, vargs.PublicPort, vargs.PrivatePort, vargs.Env}
+			Ports []int `json:"ports"`
+			PortBindings map[string]string `json:"port_bindings"`
+			Env []string `json:"env"`
+        		Links map[string]string `json:"links"`
+        		PublishAllPorts bool `json:"publish_all_ports"`
+		}{system, repo, build, vargs.Registry, vargs.Repo,
+			vargs.Ports, vargs.PortBindings, vargs.Env,
+			vargs.Links, vargs.PublishAllPorts}
 
 		if err := json.NewEncoder(&buf).Encode(&data); err != nil {
 			fmt.Printf("Error: Failed to encode JSON payload. %s\n", err)
