@@ -144,7 +144,7 @@ func main() {
 				)
 			}
 			if resp.StatusCode >= http.StatusBadRequest {
-				fmt.Printf("Error: Deployment Failed. %s\n")
+				fmt.Printf("Error: Deployment Failed.\n")
 				os.Exit(1)
 			}
 		}
