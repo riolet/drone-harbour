@@ -52,20 +52,22 @@ func main() {
 
 
 	data := struct {
-		System drone.System `json:"system"`
-		Repo   drone.Repo   `json:"repo"`
-		Build  drone.Build  `json:"build"`
-		Registry  string `json:"registry"`
-		Image string `json:"image"`
-		Tag string `json:"tag"`
-		Ports []int `json:"ports"`
-		PortBindings map[string]string `json:"port_bindings"`
-		Env []string `json:"env"`
-	Links map[string]string `json:"links"`
-	PublishAllPorts bool `json:"publish_all_ports"`
-	}{system, repo, build, vargs.Registry, vargs.Repo, vargs.Tag,
+		System 		drone.System 		`json:"system"`
+		Repo   		drone.Repo   		`json:"repo"`
+		Build  		drone.Build  		`json:"build"`
+		Registry  	string 			`json:"registry"`
+		Image 		string 			`json:"image"`
+		Name  		string 			`json:"name"`
+		Tag 		string 			`json:"tag"`
+		Ports 		[]int 			`json:"ports"`
+		PortBindings 	map[string]string 	`json:"port_bindings"`
+		Env 		[]string 		`json:"env"`
+		Links 		map[string]string 	`json:"links"`
+		Volumes 	map[string]string 	`json:"volumes"`
+		PublishAllPorts bool `json:"publish_all_ports"`
+	}{system, repo, build, vargs.Registry, vargs.Repo, vargs.Name, vargs.Tag,
 		vargs.Ports, vargs.PortBindings, vargs.Env,
-		vargs.Links, vargs.PublishAllPorts}
+		vargs.Links, vargs.Volumes, vargs.PublishAllPorts}
 
 	if err := json.NewEncoder(&buf).Encode(&data); err != nil {
 		fmt.Printf("Error: Failed to encode JSON payload. %s\n", err)
