@@ -18,7 +18,8 @@ type Params struct {
 	PortBindings 	map[string]string `json:"port_bindings"`
 	Env 		[]string 	`json:"env"`
     	Links 		map[string]string `json:"links"`
-	Volumes 	map[string]string `json:"volumes"`
+	Volumes 	[]string 		`json:"volumes"`
+	VolumeBindings 	[]string 		`json:"volume_bindings"`
     	PublishAllPorts bool `json:"publish_all_ports"`
 }
 

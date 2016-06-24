@@ -63,11 +63,12 @@ func main() {
 		PortBindings 	map[string]string 	`json:"port_bindings"`
 		Env 		[]string 		`json:"env"`
 		Links 		map[string]string 	`json:"links"`
-		Volumes 	map[string]string 	`json:"volumes"`
+		Volumes 	[]string 		`json:"volumes"`
+		VolumeBindings 	[]string 		`json:"volume_bindings"`
 		PublishAllPorts bool `json:"publish_all_ports"`
 	}{system, repo, build, vargs.Registry, vargs.Repo, vargs.Name, vargs.Tag,
 		vargs.Ports, vargs.PortBindings, vargs.Env,
-		vargs.Links, vargs.Volumes, vargs.PublishAllPorts}
+		vargs.Links, vargs.Volumes, vargs.VolumeBindings, vargs.PublishAllPorts}
 
 	if err := json.NewEncoder(&buf).Encode(&data); err != nil {
 		fmt.Printf("Error: Failed to encode JSON payload. %s\n", err)
